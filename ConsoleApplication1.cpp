@@ -9,12 +9,27 @@ int main()
 	int a, b;
     cout << "Podaj współczynnik a funkcji liniowej\n";
 	cin >> a;
-
+	
 	cout << "Podaj współczynnik b funkcji liniowej\n";
 	cin >> b;
+	if (a == 0)
+	{
+		if (b==0)
+		{
+			cout << "Nieskonczenie wiele miejsc zerowych funkcji liniowej\n";
+		}
+		else {
+			cout<< "Brak miejsc zerowych funkcji liniowej\n";
+		}
+
+	}
+	else
+	{
+
 	int c;
-	c = -b / a;
+	c = -1*b / a;
 	cout << "miejsce zerowe to x = " << c;
+	}
 
 
 }
