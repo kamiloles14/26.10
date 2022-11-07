@@ -72,11 +72,19 @@ int main()
 		cin >> b;
 		cout << "Podaj współczynnik q funkcji w postaci y= a(x-p)^2+q\n";
 		cin >> c;
+		if ((-c/a) <0)
+		{
+			cout << "Brak miejsc zerowych funkcji\n";
+		}
+		else
+		{
+
 		e = b + sqrt(-c / a);
 		cout << "\nmiejsce zerowe to x = " << e;
 		e = b - sqrt(-c / a);
 		cout << "\nmiejsce zerowe to x = " << e;
 
+		}
 
 	}
 	if (f == 4)
@@ -103,15 +111,23 @@ int main()
 			{
 
 			p = -b / 2 * a;
-			q = -sqrt(d) / 4 * a;
+			q = -d / 4 * a;
 			cout << "Postac kanoniczna  funkcji wynosi f(x)= "<<a<<"(x-"<<p<<")^2 + "<<q<<" \n";
 			}
 			if (g == 2)
 			{
+				if (d<0)
+				{
+					cout << "Postac iloczynowa  funkcji nie do okreslenia poniewaz brak miejsc zerowych funkcji \n";
+				}
+				else
+				{
+
 				p = (-b - sqrt(d)) / 2 * a;
 				q = (-b + sqrt(d)) / 2 * a;
 
 				cout << "Postac iloczynowa  funkcji wynosi f(x)= " << a << "(x-" << p << ") * (x-" << q << ") \n";
+				}
 			}
 
 
@@ -135,10 +151,17 @@ int main()
 			if (g == 3)
 			{
 				d = b * b - 4 * a * c;
-				p = (-b - sqrt(d)) / 2 * a;
-				q = (-b + sqrt(d)) / 2 * a;
+				if (d < 0)
+				{
+					cout << "Postac iloczynowa  funkcji nie do okreslenia poniewaz brak miejsc zerowych funkcji \n";
+				}
+				else
+				{
+					p = (-b - sqrt(d)) / 2 * a;
+					q = (-b + sqrt(d)) / 2 * a;
 
-				cout << "Postac iloczynowa  funkcji wynosi f(x)= " << a << "(x-" << p << ") * (x-" << q << ") \n";
+					cout << "Postac iloczynowa  funkcji wynosi f(x)= " << a << "(x-" << p << ") * (x-" << q << ") \n";
+				}
 			}
 		}
 		if (g == 5 || g == 6)
@@ -160,7 +183,7 @@ int main()
 			{
 				d = b * b - 4 * a * c;
 				p = -b / 2 * a;
-				q = -sqrt(d) / 4 * a;
+				q = -d / 4 * a;
 				cout << "Postac kanoniczna  funkcji wynosi f(x)= " << a << "(x-" << p << ")^2 + " << q << " \n";
 			}
 
