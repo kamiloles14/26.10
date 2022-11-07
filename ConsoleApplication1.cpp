@@ -10,6 +10,7 @@ int main()
 	cout << "Jaka funkcje licze wybiez: \n";
 	cout << "1.kwadratowa  \n";
 	cout << "2.liniowa  \n";
+	cout << "3.postac kanoniczna f.kwadratowa   \n";
 	cin >> f;
 	if (f==1)
 	{
@@ -50,7 +51,7 @@ int main()
 
 	}
 	}
-	else
+	if (f == 2)
 	{
 		cout << "Podaj współczynnik a funkcji w postaci ax + b \n";
 		cin >> a;
@@ -60,7 +61,22 @@ int main()
 		e = -b / a;
 		cout << "\nmiejsce zerowe to x = " << e;
 	}
+	if (f == 3) 
+	{
+		cout << "Podaj współczynnik a funkcji w postaci y= a(x-p)^2+q \n";
+		cin >> a;
 
+		cout << "Podaj współczynnik p funkcji w postaci y= a(x-p)^2+q\n";
+		cin >> b;
+		cout << "Podaj współczynnik q funkcji w postaci y= a(x-p)^2+q\n";
+		cin >> c;
+		e = b + sqrt(-c / a);
+		cout << "\nmiejsce zerowe to x = " << e;
+		e = b - sqrt(-c / a);
+		cout << "\nmiejsce zerowe to x = " << e;
+
+
+	}
 }
 
 // Uruchomienie programu: Ctrl + F5 lub menu Debugowanie > Uruchom bez debugowania
