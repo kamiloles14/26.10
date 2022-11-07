@@ -1,37 +1,37 @@
 ﻿// ConsoleApplication1.cpp : Ten plik zawiera funkcję „main”. W nim rozpoczyna się i kończy wykonywanie programu.
 //
-
+#include <math.h>
 #include <iostream>
 using namespace std;
 
 int main()
 {
-	int a, b,c,d;
-    cout << "Podaj współczynnik a funkcji w postaci Ax + By + C\n";
+	double a, b,c,d,e;
+    cout << "Podaj współczynnik a funkcji w postaci ax2 + bx + c gdzie a≠0\n";
 	cin >> a;
 	
-	cout << "Podaj współczynnik b funkcji w postaci Ax + By + C\n";
+	cout << "Podaj współczynnik b funkcji w postaci ax2 + bx + c gdzie a≠0\n";
 	cin >> b;
-	cout << "Podaj współczynnik c funkcji w postaci Ax + By + C\n";
+	cout << "Podaj współczynnik c funkcji w postaci ax2 + bx + c gdzie a≠0\n";
 	cin >> c;
-	
-	if (a == 0)
+	d = b * b - 4 * a * c;
+
+
+	if (d < 0)
 	{
-		if (c==0)
-		{
-			cout << "Nieskonczenie wiele miejsc zerowych funkcji liniowej\n";
-		}
-		else {
-			cout<< "Brak miejsc zerowych funkcji liniowej\n";
-		}
+		
+			cout<< "Brak miejsc zerowych funkcji \n";
+		
 
 	}
 	else
 	{
 
 	
-	d = -1 * c / a;
-	cout << "miejsce zerowe to x = " << c;
+		e = (-b - sqrt(d)) / 2 * a;
+	cout << "\nmiejsce zerowe to x = " << e;
+	e = (-b + sqrt(d)) / 2 * a;
+	cout << "\nmiejsce zerowe to x = " << e;
 	}
 
 
