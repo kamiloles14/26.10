@@ -7,14 +7,21 @@ using namespace std;
 int main()
 {
 	double a, b,c,d,e;
-    cout << "Podaj współczynnik a funkcji w postaci ax2 + bx + c gdzie a≠0\n";
+    cout << "Podaj współczynnik a funkcji w postaci ax2 + bx + c \n";
 	cin >> a;
 	
-	cout << "Podaj współczynnik b funkcji w postaci ax2 + bx + c gdzie a≠0\n";
+	cout << "Podaj współczynnik b funkcji w postaci ax2 + bx + c \n";
 	cin >> b;
-	cout << "Podaj współczynnik c funkcji w postaci ax2 + bx + c gdzie a≠0\n";
+	cout << "Podaj współczynnik c funkcji w postaci ax2 + bx + c \n";
 	cin >> c;
 	d = b * b - 4 * a * c;
+	if (a==0)
+	{
+		e = -c / b;
+		cout << "\nmiejsce zerowe to x = " << e;
+	}
+	else
+	{
 
 
 	if (d < 0)
@@ -34,6 +41,7 @@ int main()
 	cout << "\nmiejsce zerowe to x = " << e;
 	}
 
+	}
 
 }
 
