@@ -6,15 +6,18 @@ using namespace std;
 
 int main()
 {
-	int a, b;
-    cout << "Podaj współczynnik a funkcji liniowej\n";
+	int a, b,c,d;
+    cout << "Podaj współczynnik a funkcji w postaci Ax + By + C\n";
 	cin >> a;
 	
-	cout << "Podaj współczynnik b funkcji liniowej\n";
+	cout << "Podaj współczynnik b funkcji w postaci Ax + By + C\n";
 	cin >> b;
+	cout << "Podaj współczynnik c funkcji w postaci Ax + By + C\n";
+	cin >> c;
+	
 	if (a == 0)
 	{
-		if (b==0)
+		if (c==0)
 		{
 			cout << "Nieskonczenie wiele miejsc zerowych funkcji liniowej\n";
 		}
@@ -26,8 +29,8 @@ int main()
 	else
 	{
 
-	int c;
-	c = -1*b / a;
+	
+	d = -1 * c / a;
 	cout << "miejsce zerowe to x = " << c;
 	}
 
