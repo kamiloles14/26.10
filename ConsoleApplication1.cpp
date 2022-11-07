@@ -6,7 +6,14 @@ using namespace std;
 
 int main()
 {
-	double a, b,c,d,e;
+	double a, b,c,d,e,f;
+	cout << "Jaka funkcje licze wybiez: \n";
+	cout << "1.kwadratowa  \n";
+	cout << "2.liniowa  \n";
+	cin >> f;
+	if (f==1)
+	{
+
     cout << "Podaj współczynnik a funkcji w postaci ax2 + bx + c \n";
 	cin >> a;
 	
@@ -41,6 +48,17 @@ int main()
 	cout << "\nmiejsce zerowe to x = " << e;
 	}
 
+	}
+	}
+	else
+	{
+		cout << "Podaj współczynnik a funkcji w postaci ax + b \n";
+		cin >> a;
+
+		cout << "Podaj współczynnik b funkcji w postaci ax + b\n";
+		cin >> b;
+		e = -b / a;
+		cout << "\nmiejsce zerowe to x = " << e;
 	}
 
 }
